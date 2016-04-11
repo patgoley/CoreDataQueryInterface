@@ -130,3 +130,13 @@ extension ExpressionQueryType {
         return value(expression(attribute), managedObjectContext: managedObjectContext)
     }
 }
+
+extension QueryType where QueryResultType: TypedExpressionConvertible {
+    
+    func bindFirst() -> ObjectQueryBinding<QueryResultType> {
+        
+        let firstQuery = limit(1)
+        
+        return ObjectQueryBinding(query: firstQuery)
+    }
+}
