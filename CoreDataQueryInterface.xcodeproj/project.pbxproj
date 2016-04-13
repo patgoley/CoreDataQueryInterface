@@ -25,6 +25,9 @@
 		8E4918EA1CB35F1E00DFB3C8 /* ManagedObjectContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4918E91CB35F1E00DFB3C8 /* ManagedObjectContextTests.swift */; };
 		8E4918EB1CB35F1E00DFB3C8 /* ManagedObjectContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4918E91CB35F1E00DFB3C8 /* ManagedObjectContextTests.swift */; };
 		8E4919081CB75ACE00DFB3C8 /* QueryBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4919071CB75ACE00DFB3C8 /* QueryBinding.swift */; };
+		8E49190E1CBC8A8200DFB3C8 /* ObjectQueryBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E49190D1CBC8A8200DFB3C8 /* ObjectQueryBinding.swift */; };
+		8E4919121CBCA6BE00DFB3C8 /* QueryBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4919071CB75ACE00DFB3C8 /* QueryBinding.swift */; };
+		8E4919131CBCA6C700DFB3C8 /* ObjectQueryBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E49190D1CBC8A8200DFB3C8 /* ObjectQueryBinding.swift */; };
 		8EC22BBF1CAA37D500642BB6 /* TypedExpressionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC22BBE1CAA37D500642BB6 /* TypedExpressionConvertible.swift */; };
 		8EC22BC11CAA3AE400642BB6 /* TypedExpressionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC22BBE1CAA37D500642BB6 /* TypedExpressionConvertible.swift */; };
 		F30C0B7C1B37A20A00D8D762 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C0B7B1B37A20A00D8D762 /* Util.swift */; };
@@ -145,6 +148,7 @@
 		8E4918DE1CAF6F1200DFB3C8 /* StringAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StringAttribute.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8E4918E91CB35F1E00DFB3C8 /* ManagedObjectContextTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextTests.swift; sourceTree = "<group>"; };
 		8E4919071CB75ACE00DFB3C8 /* QueryBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryBinding.swift; sourceTree = "<group>"; };
+		8E49190D1CBC8A8200DFB3C8 /* ObjectQueryBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectQueryBinding.swift; sourceTree = "<group>"; };
 		8EC22BBE1CAA37D500642BB6 /* TypedExpressionConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TypedExpressionConvertible.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F30C0B7B1B37A20A00D8D762 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		F30D1CCA1B2A891100AF80A1 /* CoreDataQueryInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataQueryInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +285,7 @@
 				F3158D1B1B2A91040041B125 /* EntityType.swift */,
 				F371ABDA1B2BC15C002A8A85 /* Executing.swift */,
 				8E4919071CB75ACE00DFB3C8 /* QueryBinding.swift */,
+				8E49190D1CBC8A8200DFB3C8 /* ObjectQueryBinding.swift */,
 				F371ABC11B2BAC28002A8A85 /* ExpressionQuery.swift */,
 				F371ABCB1B2BBB15002A8A85 /* ExpressionQueryType.swift */,
 				F371ABD01B2BC122002A8A85 /* Filtering.swift */,
@@ -534,6 +539,7 @@
 				F371ABBA1B2BA8BA002A8A85 /* QueryBuilder.swift in Sources */,
 				F371ABE21B2BC1F7002A8A85 /* Selecting.swift in Sources */,
 				F39E485E1CB0214900A60255 /* NSManagedObjectID.swift in Sources */,
+				8E4919131CBCA6C700DFB3C8 /* ObjectQueryBinding.swift in Sources */,
 				F33863A41C322DB700818352 /* CustomPropertyConvertible.swift in Sources */,
 				F37A46F21B2BD61700D4EE61 /* Attribute.swift in Sources */,
 				8EC22BC11CAA3AE400642BB6 /* TypedExpressionConvertible.swift in Sources */,
@@ -541,6 +547,7 @@
 				F371ABDD1B2BC15C002A8A85 /* Executing.swift in Sources */,
 				F37A46F71B2BD77900D4EE61 /* Predicate.swift in Sources */,
 				F3158D1D1B2A91040041B125 /* EntityType.swift in Sources */,
+				8E4919121CBCA6BE00DFB3C8 /* QueryBinding.swift in Sources */,
 				F371ABC41B2BAC28002A8A85 /* ExpressionQuery.swift in Sources */,
 				F35DD3791CB01C5300FB2EF8 /* DataAttribute.swift in Sources */,
 				8E4918E61CAF71BD00DFB3C8 /* StringAttribute.swift in Sources */,
@@ -592,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F371ABCC1B2BBB15002A8A85 /* ExpressionQueryType.swift in Sources */,
+				8E49190E1CBC8A8200DFB3C8 /* ObjectQueryBinding.swift in Sources */,
 				F335F5D31CB2CE370044A826 /* Logger.swift in Sources */,
 				F38B43041CB04AFE0028E515 /* EntityAttribute.swift in Sources */,
 				F33863931C322AFE00818352 /* CustomExpressionConvertible.swift in Sources */,

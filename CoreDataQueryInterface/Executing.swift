@@ -131,7 +131,7 @@ extension ExpressionQueryType {
     }
 }
 
-extension QueryType where QueryResultType: TypedExpressionConvertible {
+extension QueryType where QueryResultType: EntityType {
     
     func bindFirst() -> ObjectQueryBinding<QueryResultType> {
         
