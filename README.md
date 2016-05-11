@@ -165,6 +165,26 @@ swiftProjectNames = projectQuery.array(project.name)
 
 Add the launch argument `-com.prosumma.CoreDataQueryInterface.Debug` to your application while debugging and CDQI will emit useful details about every generated fetch request. When used in combination with Apple's `-com.apple.CoreData.SQLDebug` launch argument, a wealth of information becomes available.
 
+### Build Scripts
+
+CDQI can easily be integrated into build scripts or CI environments. Below is an example script that will locate all .xcdatamodeld files in a directory and regenerate the related attribute files. Placing this script before the "Compile Sources" phase of your project's build phases will ensure that your proxy attributes are up to date with your model before each build.
+
+
+```sh
+TARGET_DIR="${PROJECT_DIR}/${TARGET_NAME}"
+CDQI=Carthage/Checkouts/CoreDataQueryInterface/bin/cdqi
+
+for f in $(find $TARGET_DIR -name "*.xcdatamodeld")
+do
+    FILENAME=$(basename $f)
+    MODEL_DIR=$(dirname $f)
+    MODEL=${FILENAME%.*}
+    echo "Generating model attributes for ${MODEL} in ${MODEL_DIR}"
+    $CDQI --in $MODEL_DIR --force "${MODEL}"
+done
+```
+
+
 ### Kudos
 
 My thanks to [Pat Goley](https://github.com/patgoley) for providing the impetus for and assistance with type safety in filter expressions.
