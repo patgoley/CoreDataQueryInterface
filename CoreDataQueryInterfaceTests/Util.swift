@@ -26,7 +26,7 @@ SOFTWARE.
 import Foundation
 
 extension Sequence {
-    func toDictionary<Key: Hashable, Value>(_ transform: (Iterator.Element) -> (Key, Value)) -> Dictionary<Key, Value> {
+    func toDictionary<Key, Value>(_ transform: (Iterator.Element) -> (Key, Value)) -> Dictionary<Key, Value> {
         var result = Dictionary<Key, Value>()
         for elem in self {
             let (key, value) = transform(elem)

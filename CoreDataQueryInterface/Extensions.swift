@@ -10,7 +10,7 @@ import CoreData
 import Foundation
 
 extension NSManagedObjectContext {
-    public func from<M: NSManagedObject>(_ entity: M.Type = M.self) -> Query<M, M> where M: Entity {
+    public func from<M>(_ entity: M.Type = M.self) -> Query<M, M> {
         return Query<M, M>().context(managedObjectContext: self)
     }
     
